@@ -60,9 +60,6 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
         }
         edge = list_next(lista_aristas);
     }
-}
-    
-
     // Si no existe el origen o terminamos de iterar sin encontrar el destino
     return -1; 
 }
