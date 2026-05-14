@@ -96,3 +96,16 @@ Thu May 14 08:15:46 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 8e2e62f
+Thu May 14 08:16:44 PM UTC 2026: 
+ graph.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:55:9: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   55 |         return;
+      |         ^~~~~~
+graph.c:49:5: note: declared here
+   49 | int getWeight(Graph* g, const char* label1, const char* label2) {
+      |     ^~~~~~~~~
+b2c13d2
