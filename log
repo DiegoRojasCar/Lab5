@@ -168,3 +168,17 @@ Sat May 16 07:28:21 PM UTC 2026:
  1 file changed, 1 insertion(+), 2 deletions(-)
  tests:  0|0
 80a155b
+Sat May 16 07:29:32 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:40:42: error: expected ‘)’ before ‘label’
+   40 |     if(map_search(g->adjacencyMap, (void* label))!= NULL) return;
+      |                                    ~     ^~~~~~
+      |                                          )
+graph.c:40:49: error: expected expression before ‘)’ token
+   40 |     if(map_search(g->adjacencyMap, (void* label))!= NULL) return;
+      |                                                 ^
+f766b12
