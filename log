@@ -150,3 +150,16 @@ Sat May 16 07:11:08 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 43e7283
+Sat May 16 07:27:27 PM UTC 2026: 
+ graph.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:44:23: error: invalid use of incomplete typedef ‘Map’
+   44 |     g -> adjacencyMap -> key = copia;
+      |                       ^~
+graph.c:45:23: error: invalid use of incomplete typedef ‘Map’
+   45 |     g -> adjacencyMap -> value = lista;
+      |                       ^~
+ad67482
