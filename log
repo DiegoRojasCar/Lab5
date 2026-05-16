@@ -204,3 +204,22 @@ Sat May 16 07:57:01 PM UTC 2026:
  tests:  12|0
 ========================================
 85cf0bb
+Sat May 16 08:03:09 PM UTC 2026: 
+ graph.c | 20 ++++++++++++++++----
+ 1 file changed, 16 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getAdjacentLabels’:
+graph.c:115:8: error: ‘edges’ undeclared (first use in this function)
+  115 |     if(edges == NULL){
+      |        ^~~~~
+graph.c:115:8: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:119:37: error: ‘list_edges’ undeclared (first use in this function); did you mean ‘lista_edges’?
+  119 |     Edge* edge = (Edge*) list_first(list_edges);
+      |                                     ^~~~~~~~~~
+      |                                     lista_edges
+graph.c:114:11: error: unused variable ‘lista_edges’ [-Werror=unused-variable]
+  114 |     List* lista_edges = getEdges(g, label);
+      |           ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+4807456

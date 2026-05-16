@@ -94,14 +94,14 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
         return -1;
     }
 
-    List* lista_aristas = (List *) pair -> value;
-    Edge* edge = list_first(lista_aristas);
+    List* lista_edges = (List *) pair -> value;
+    Edge* edge = list_first(lista_edges);
 
     while(edge != NULL){
         if(strcmp(edge -> target,(char *) label2) == 0){
             return edge -> weight;
         }
-        edge = list_next(lista_aristas);
+        edge = list_next(lista_edges);
     }
     // Si no existe el origen o terminamos de iterar sin encontrar el destino
     return -1; 
@@ -111,10 +111,22 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
 List* getAdjacentLabels(Graph* g, const char* label) {
     if (!g || !label) return NULL;
 
+    List* lista_edges = getEdges(g, label);
+    if(edges == NULL){
+        return NULL;
+    }
+    List* lista_vecinos = list_create();
+    Edge* edge = (Edge*) list_first(list_edges);
+
+    while(edge != NULL){
+        list_pushBack(lista_vecinos, edge -> target);
+        edge = list_next(list_edges);
+    }
+    return lista_vecinos;
+
     
-
-
-    return NULL; 
+    
+    
 }
 
 void destroyGraph(Graph* g) {
