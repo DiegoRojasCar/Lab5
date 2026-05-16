@@ -112,7 +112,7 @@ List* getAdjacentLabels(Graph* g, const char* label) {
     if (!g || !label) return NULL;
 
     List* lista_edges = getEdges(g, label);
-    if(edges == NULL){
+    if(lista_edges == NULL){
         return NULL;
     }
     List* lista_vecinos = list_create();
