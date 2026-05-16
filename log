@@ -134,3 +134,14 @@ map.h:14:6: note: declared here
    14 | Map *map_create(int (*is_equal)(void *key1, void *key2)); // unsorted map
       |      ^~~~~~~~~~
 13e86ed
+Sat May 16 07:10:55 PM UTC 2026: 
+ graph.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:33:36: error: ‘is_equal’ undeclared (first use in this function)
+   33 |     g -> adjacencyMap = map_create(is_equal);
+      |                                    ^~~~~~~~
+graph.c:33:36: note: each undeclared identifier is reported only once for each function it appears in
+4aefd93

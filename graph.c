@@ -27,10 +27,11 @@ int is_equal_string(void *key1, void *key2) {
  * ========================================= */
 
 Graph* createGraph() {
-    Graph* g = (Graph *) malloc(sizeof(Gradh));
-    g -> adjacencyMap = map_create();
+    Graph* g = (Graph *) malloc(sizeof(Graph));
+    if(g == NULL) return NULL;
+    
+    g -> adjacencyMap = map_create(is_equal);
     return g;
-    return NULL;
 }
 
 void addNode(Graph* g, const char* label) {
@@ -95,7 +96,7 @@ void destroyGraph(Graph* g) {
             e = (Edge*)list_next(edgesList);
         }
 
-        // 2. Liberar la Lista
+        // 2. Liberar la Listais_equal
         list_clean(edgesList);
         free(edgesList);
 
