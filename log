@@ -115,3 +115,22 @@ Thu May 14 08:16:53 PM UTC 2026:
  tests:  1|5
 ========================================
 77613e9
+Sat May 16 07:05:32 PM UTC 2026: 
+ graph.c | 3 +++
+ 1 file changed, 3 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:30:40: error: ‘Gradh’ undeclared (first use in this function); did you mean ‘Graph’?
+   30 |     Graph* g = (Graph *) malloc(sizeof(Gradh));
+      |                                        ^~~~~
+      |                                        Graph
+graph.c:30:40: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:31:25: error: too few arguments to function ‘map_create’
+   31 |     g -> adjacencyMap = map_create();
+      |                         ^~~~~~~~~~
+In file included from graph.c:8:
+map.h:14:6: note: declared here
+   14 | Map *map_create(int (*is_equal)(void *key1, void *key2)); // unsorted map
+      |      ^~~~~~~~~~
+13e86ed
