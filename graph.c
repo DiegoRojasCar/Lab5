@@ -116,11 +116,11 @@ List* getAdjacentLabels(Graph* g, const char* label) {
         return NULL;
     }
     List* lista_vecinos = list_create();
-    Edge* edge = (Edge*) list_first(list_edges);
+    Edge* edge = (Edge*) list_first(lista_edges);
 
     while(edge != NULL){
         list_pushBack(lista_vecinos, edge -> target);
-        edge = list_next(list_edges);
+        edge = list_next(lista_edges);
     }
     return lista_vecinos;
 

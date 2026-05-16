@@ -223,3 +223,14 @@ graph.c:114:11: error: unused variable ‘lista_edges’ [-Werror=unused-variabl
       |           ^~~~~~~~~~~
 cc1: all warnings being treated as errors
 4807456
+Sat May 16 08:03:35 PM UTC 2026: 
+ graph.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getAdjacentLabels’:
+graph.c:115:8: error: ‘edges’ undeclared (first use in this function)
+  115 |     if(edges == NULL){
+      |        ^~~~~
+graph.c:115:8: note: each undeclared identifier is reported only once for each function it appears in
+7c63e4c
