@@ -68,7 +68,7 @@ void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     edge -> weight =  weight;
     edge -> target = strdup(dest);
 
-    list_pushback(lista_edges, edge);
+    list_pushBack(lista_edges, edge);
     
 
 }
