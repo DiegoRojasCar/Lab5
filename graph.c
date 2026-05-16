@@ -53,12 +53,36 @@ void addNode(Graph* g, const char* label) {
 void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     if (!g || !src || !dest) return;
 
+    MapPair* pair = map_search(g -> adjacencyMap, (void *)src);
+    if(pair == NULL){
+        return;
+    }
+
+    List* lista_edges = (List *) pair -> value;
+    Edge* edge = (Edge *) malloc(sizeof(Edge));
+
+    if (edge == NULL){
+        return;
+    }
+
+    edge -> weight =  weight;
+    edge -> target = strdup(dest);
+
+    list_pushback(lista_edges, edge);
+    
+
 }
 
 List* getEdges(Graph* g, const char* label) {
     if (!g || !label) return NULL;
 
-    return NULL;
+    MapPair* pair = map_search(g->adjacencyMap, (void *)label);
+    if(pair == NULL){
+        return NULL;
+    }
+
+    List* lista = (List*) pair -> value;
+    return lista;
 }
 
 int getWeight(Graph* g, const char* label1, const char* label2) {
@@ -86,6 +110,8 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
 // Retorna una nueva List* que contiene elementos de tipo char* (las etiquetas)
 List* getAdjacentLabels(Graph* g, const char* label) {
     if (!g || !label) return NULL;
+
+    
 
 
     return NULL; 
