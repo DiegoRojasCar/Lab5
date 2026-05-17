@@ -122,10 +122,7 @@ List* getAdjacentLabels(Graph* g, const char* label) {
         list_pushBack(lista_vecinos, edge -> target);
         edge = list_next(lista_edges);
     }
-    return lista_vecinos;
-
-    
-    
+    return lista_vecinos;  
     
 }
 
